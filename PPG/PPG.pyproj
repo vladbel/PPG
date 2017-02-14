@@ -12,6 +12,7 @@
     <OutputPath>.</OutputPath>
     <Name>PPG</Name>
     <RootNamespace>PPG</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,7 +23,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="PFDAB\CH2\plotData.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PFDAB\CH2\readDataFromFile.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PPG.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PFDAB\" />
+    <Folder Include="PFDAB\CH2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PFDAB\CH2\data.txt" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
